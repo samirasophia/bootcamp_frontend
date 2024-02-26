@@ -47,7 +47,7 @@
     overflow:hidden;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
     height:50vw;
@@ -56,19 +56,23 @@
     min-width:400px;
     background-color: black;
     color: white;
+    text-decoration: underline;
 }
 .side-image-left {
-    justify-content: left;
+    justify-content:left;
     align-content: space-around;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
 .side-image-right{
     justify-content: right;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
-
+.column-unterseite {
+    align-items: center;
+justify-content: space-evenly;
+}
     </style>
 </head>
 <body>
@@ -85,19 +89,17 @@
 </div>
 </div>
 <div class="header-small">
-    <h2>About me</h2>
     <img class="side-image-left" src="https://i.pinimg.com/736x/c9/31/75/c931759334468392751dfa59b0425cea.jpg">
+    <h2>>>------ About me ------<<</h2>
     <img class="side-image-right" src="https://i.pinimg.com/736x/c9/31/75/c931759334468392751dfa59b0425cea.jpg">
 </div>
 
-    <nav>
-        <ul>
-            <li><a href="#">Steckbrief</a></li>
-            <li><a href="#">Hobbies</a></li>
-            <li><a href="#">Leistungen</a></li>
-            <li><a href="#">Kontakt</a></li>
-        </ul>
-    </nav>
+<div class="column-unterseite">
+    <a href="column-unterseite">Steckbrief</a>
+    <a href="column-unterseite">Hobbies</a>
+    <a href="column-unterseite">Leistungen</a>
+    <a href="column-unterseite">Kontakt</a>
+</div>
 
 </body>
 </html>
