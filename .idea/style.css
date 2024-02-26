@@ -1,0 +1,76 @@
+
+body{
+    background-color: floralwhite;
+}
+.text-style{
+    font-family: Arial;
+}
+#corner1 {
+    border-radius: 25px;
+    background-color: navajowhite;
+}
+#corner2 {
+    border-radius: 25px;
+    background-color: Black;
+    color: white;
+}
+.text-container{
+    display: inline-block;
+    border: 1px navajowhite;
+    padding: 2px
+}
+.after-element {
+    top: -40%;
+    font-size: calc(var(--input-fontSize) - 3px);
+    color: #fff;
+    left: calc(var(--input-padding) - 5px);
+}
+.button:hover {
+    font-family: "Arial Black";
+    padding: 10px 15px;
+    font-size: 18px;
+}
+.customer-reviews {
+    max-width: 600px;
+    margin: auto;
+}
+
+.review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+}
+h3 {
+    text-align: center;
+}
+.box {
+    backdrop-color: blue;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+}
+.navbar {
+    height: 50px;
+    position: fixed;
+    top: 5px;
+    left: 100px;
+    background-color: azure;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    heigth: 100px;
+    background-color: plum;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    height: 20px;
+}
