@@ -70,35 +70,72 @@
     height: 70px;
 }
 .column-unterseite {
+    position:relative;
+    overflow:hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+    height:50vw;
+    min-height:10px;
+    max-height:100px;
+    min-width: 1px;
+    color: white;
+    text-decoration: underline;
+}
+.column {
+    display: flex;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-justify-content: space-evenly;
+    height:50vw;
+    min-height:100px;
+    max-height:100px;
+    min-width: 25%;
+    background-image: #FFF url(images/logo.jpg);
 }
     </style>
+
 </head>
+
 <body>
 
 <div class="header">
     <div class="header-text">
+
     <h1>Samira</h1>
     <h2>Die Zukunft der SAP-Entwicklung</h2>
-        <!--
-<div class="header-img">
-    <img src="https://i.pngimg.me/thumb/f/720/m2i8N4G6Z5N4N4H7.jpg">
+
+    </div>
 </div>
--->
-</div>
-</div>
+
 <div class="header-small">
     <img class="side-image-left" src="https://i.pinimg.com/736x/c9/31/75/c931759334468392751dfa59b0425cea.jpg">
     <h2>>>------ About me ------<<</h2>
     <img class="side-image-right" src="https://i.pinimg.com/736x/c9/31/75/c931759334468392751dfa59b0425cea.jpg">
 </div>
 
+
 <div class="column-unterseite">
-    <a href="column-unterseite">Steckbrief</a>
-    <a href="column-unterseite">Hobbies</a>
-    <a href="column-unterseite">Leistungen</a>
-    <a href="column-unterseite">Kontakt</a>
+
+<div  class="column">
+    <a href>Steckbrief</a>
+
+</div>
+
+<div class="column">
+    <a href>Hobbies</a>
+</div>
+
+<div class="column">
+    <a href>Leistungen</a>
+</div>
+
+<div class="column">
+    <a href>Kontakt</a>
+</div>
+
 </div>
 
 </body>
