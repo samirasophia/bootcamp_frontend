@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css-hobbies/buttons.css">
+    <link rel="stylesheet" href="css-hobbies/columns.css">
+    <link rel="stylesheet" href="css-hobbies/header.css">
+    <link rel="stylesheet" href="css-hobbies/images-bg.css">
+    <title>Title</title>
+    <style>
+
+        .bg-gaming {
+            background-image: url(images-hobbies/tarkov2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            height: 35vw;
+            z-index: 0;
+        }
+
+        .bg-gaming:before {
+            content: "";
+            background: linear-gradient(
+                    45deg,
+                    darkviolet,
+                    blueviolet,
+                    blue,
+                    darkblue,
+                    steelblue,
+                    darkviolet,
+                    blueviolet,
+                    mediumvioletred
+            );
+            position: absolute;
+            top: +4px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(20px);
+            -webkit-filter: blur(20px);
+            -moz-filter: blur(20px);
+            width: 100vw;
+            height: 35.25vw;
+            animation: glowing-button-glow 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .bg-gaming:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 35vw;
+            left: 0;
+            top: +4px;
+            background-image: url(images-hobbies/tarkov2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .bg-piano {
+            background-image: url(images-hobbies/music2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            height: 35vw;
+            z-index: 0;
+        }
+
+        .bg-piano:before {
+            content: "";
+            background: linear-gradient(
+                    45deg,
+                    darkviolet,
+                    blueviolet,
+                    blue,
+                    darkblue,
+                    steelblue,
+                    darkviolet,
+                    blueviolet,
+                    mediumvioletred
+            );
+            position: absolute;
+            top: +4px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(20px);
+            -webkit-filter: blur(20px);
+            -moz-filter: blur(20px);
+            width: 100vw;
+            height: 35.25vw;
+            animation: glowing-button-glow 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+
+        }
+
+        .bg-piano:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 35vw;
+            left: 0;
+            top: +6px;
+            background-image: url(images-hobbies/music2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*
+
+
+         */
+        .bg-snake {
+            background-image: url(images-hobbies/snake4.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            height: 35vw;
+            z-index: 0;
+        }
+
+        .bg-snake:before {
+            content: "";
+            background: linear-gradient(
+                    45deg,
+                    darkviolet,
+                    blueviolet,
+                    blue,
+                    darkblue,
+                    steelblue,
+                    darkviolet,
+                    blueviolet,
+                    mediumvioletred
+            );
+            position: absolute;
+            top: +4px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(20px);
+            -webkit-filter: blur(20px);
+            -moz-filter: blur(20px);
+            width: 100vw;
+            height: 35.25vw;
+            animation: glowing-button-glow 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .bg-snake:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 35vw;
+            left: 0;
+            top: +4px;
+            background-image: url(images-hobbies/snake4.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="header-small">
+<h1 class="glow header-text">Hobbies&Interests</h1>
+</div>
+
+<div class="column-unterseite">
+
+<div class="column bg-gaming">
+</div>
+
+<div class="mini-column">
+    <button class="button-glow  button">Gayming</button>
+</div>
+</div>
+
+    <div class="column-unterseite">
+<div class="column bg-piano">
+</div>
+
+    <div class="mini-column">
+        <button class="button-glow  button">Musik</button>
+    </div>
+    </div>
+<div class="column-unterseite">
+
+    <div class="column bg-snake">
+    </div>
+
+    <div class="mini-column">
+        <button class="button-glow  button">Tiere</button>
+    </div>
+</div>
+</body>
+</html>

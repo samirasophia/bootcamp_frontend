@@ -1,0 +1,99 @@
+.button{
+    transition: background-color 0.5s ease;
+
+}
+.button:hover {
+    background-color: blueviolet;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    box-shadow: 0 0 10px dodgerblue, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+    animation: glowing-btn1 20s linear infinite;
+}
+.button:active {
+}
+
+
+.button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+}
+
+
+.button-glow {
+
+    font-family: Serif;
+    font-size: 25px;
+    border-radius: 999px;
+    color: #FFFFFF;
+    cursor: pointer;
+    line-height: 4vh;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    touch-action: manipulation;
+    width: 10vw;
+    word-break: break-word;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    touch-action: manipulation;
+}
+
+.button-glow:before {
+    content: "";
+    background: linear-gradient(
+            45deg,
+            hotpink,
+            deeppink,
+            violet,
+            darkviolet,
+            blueviolet,
+            blue,
+            darkblue,
+            steelblue,
+            mediumvioletred
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-glow 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 999px;
+}
+
+.button:active {
+    background-color: pink;
+    box-shadow: pink 5px pink;
+    transform: translateY(4px);
+}
+
+@keyframes glowing-button-glow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-glow:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: darkviolet;
+    left: 0;
+    top: 0;
+    border-radius: 999px;
+}

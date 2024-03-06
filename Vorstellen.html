@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .header {
-            background-color: cornflowerblue;
-            border-radius: 25px;
-        }
         body {
             background-color: #f5a6e9;
+            margin: 0px;
         }
         .header-img {
             justify-content: center;
             align-items: center;
             align-content: center;
             padding: 350px;
-
         }
         .header-text {
             justify-content: center;
@@ -39,7 +35,10 @@
             max-height:550px;
             min-width:300px;
             color:#eee;
-            background-image: url("https://media1.tenor.com/m/e0osqzyIJIkAAAAC/hello-kitty-sanrio.gif");
+            background-image: url("https://www.bgw-sg.com/wp-content/uploads/ezgif.com-gif-maker1.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             font-size: 30px;
         }
 .header-small {
@@ -78,8 +77,6 @@
     align-items: flex-start;
     align-content: center;
     height:50vw;
-    min-height:10px;
-    max-height:100px;
     min-width: 1px;
     color: white;
     text-decoration: underline;
@@ -90,16 +87,52 @@
     justify-content: center;
     align-items: center;
     height:50vw;
-    min-height:100px;
-    max-height:100px;
-    min-width: 25%;
-    background-image: #FFF url(images/logo.jpg);
+    height:1250px;
+    width: 25%;
 }
+    .bg-img-steckbrief {
+        background-image: url(https://i.pinimg.com/736x/9f/42/99/9f4299ed3448b494c48a5d4fa1795876.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+        .bg-img-hobbies {
+            background-image: url(https://images3.alphacoders.com/133/thumb-1920-1338175.png);
+        background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .bg-img-leistungen{
+       background-image: url(images-hobbies/kontakt.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .bg-img-kontakt {
+            background-image: url(https://i.pinimg.com/736x/40/dc/6c/40dc6c6cf3ce26d8a490812b6a5d3c4f.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .button:hover {
+            font-family: "Serif";
+cursor: pointer;
+            transform: scale(1.01);
+        }
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
     </style>
 
 </head>
 
 <body>
+
+
+
 
 <div class="header">
     <div class="header-text">
@@ -116,27 +149,35 @@
     <img class="side-image-right" src="https://i.pinimg.com/736x/c9/31/75/c931759334468392751dfa59b0425cea.jpg">
 </div>
 
-
 <div class="column-unterseite">
 
-<div  class="column">
-    <a href>Steckbrief</a>
+<a href="/Steckbrief.html"  class="column bg-img-steckbrief button">
+<div>
+    <span>Steckbrief</span>
+    </div>
+</a>
 
+<a href="/Hobbies.html" class="column bg-img-hobbies button">
+        <div>
+    <span>Hobbies</span>
+</div>
+</a>
+
+        <a href="/Leistungen.html" class="column bg-img-leistungen button">
+    <div>
+    <span>Leistungen</span>
+    </div>
+    </a>
+
+    <a href="/Kontakt.html" class="column bg-img-kontakt button">
+    <div>
+    <span>Kontakt</span>
+    </div>
+    </a>
 </div>
 
-<div class="column">
-    <a href>Hobbies</a>
-</div>
 
-<div class="column">
-    <a href>Leistungen</a>
-</div>
 
-<div class="column">
-    <a href>Kontakt</a>
-</div>
-
-</div>
 
 </body>
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 1px;
+            background-color: #738fac;
+        }
+        .header-small {
+            height:30px;
+            min-width:400px;
+            background-color: #354a5f;
+            border-color: #738fac;
+            border-left-style: none;
+            border-right-style: none;
+            border-bottom-style: solid;
+            border-top-style: none;
+         border-width: 1px;
+            justify-content: space-between;
+        }
+        .header-middle {
+
+            height:60px;
+            min-width:400px;
+            background-color: #354a5f;
+        }
+        .header-black-small {
+            border-color: #37424e;
+            border-left-style: none;
+            border-right-style: none;
+            border-bottom-style: solid;
+            border-top-style: none;
+            border-width: 1px;
+
+            height:60px;
+            min-width:400px;
+            background-color: #29313a;
+
+        }
+        .body-big {
+            border-color: #37424e;
+            border-left-style: none;
+            border-right-style: none;
+            border-bottom-style: solid;
+            border-top-style: none;
+            border-width: 1px;
+
+            height:80vw;
+            min-width:400px;
+            background-color: #1c2228;
+        }
+        .header {
+            position:relative;
+            overflow:hidden;
+            display: flex;
+            flex-wrap: wrap;
+           /* justify-content: flex-start; */
+            align-items: center;
+            align-content: center;
+             /* border-color: #738fac;
+            border-style: solid; */
+        }
+        .coop-logo {
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            width: 7vw;
+            height: auto;
+        }
+        .text-sap {
+            padding-left: 30vw;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: lighter;
+            color: white;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+        .button {
+            background-color: transparent;
+            color: #c0d7ed;
+            border: none;
+            cursor: pointer;
+        }
+        .text-info {
+            padding-left: 30vw;
+            font-size: small;
+            font-style: normal;
+            font-weight: lighter;
+            color: #c0d7ed;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+        .navigation-right {
+           display: flex;
+           float: right;
+            align-content: ;
+        }
+    </style>
+
+</head>
+<body>
+<div class="header-small header">
+    <div>
+    <button class="button">☰</button>
+    <button class="button">Menü</button>
+    <button class="button">Bearbeiten</button>
+    <button class="button">Favoriten</button>
+    <button class="button">Zusätze</button>
+    <button class="button">System</button>
+    <button class="button">Hilfe</button>
+    </div>
+<div class="navigation-right">
+        <button id="Systeminformationen-schliessen" class="button navigation-right" onclick="myButton" > 〱 </button>
+        <span class="text-info" id="Systeminfo"></span>
+</div>
+
+</div>
+<div class="header-middle header">
+    <img class="coop-logo" src="images-leistungen/coop.png">
+    <h1 class="header-text text-sap">SAP Easy Access</h1>
+</div>
+<div class="header-black-small header">
+    <h1 class="header-text">Hobbies&Interests</h1>
+</div>
+<div class="header body-big">
+
+</div>
+<script defer>
+    const myButton = document.getElementById('Systeminformationen-schliessen');
+
+    console.log(myButton);
+    const info = document.getElementById('Systeminfo');
+    myButton.addEventListener('click', function() {
+        console.log(info.innerHTML);
+        if(!info.innerHTML){
+        info.innerHTML = 'ECN (1) 701';
+            myButton.style.transform = "rotate(180deg)"
+        }
+        else {
+            info.innerHTML='';
+            myButton.style.transform = ""
+            }
+    })
+    // document.querySelector("#Systeminformationen-schliessen")
+
+</script>
+
+</body>
+
+</html>
