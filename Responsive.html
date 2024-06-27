@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts Integration -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+/* phone first */
+          body {
+              grid-template-columns: 3fr 3fr 3fr;
+              grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+          }
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f0f4f8;
+        }
+
+        .header, .nav, .footer {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header { grid-area: header; }
+        /*.nav { grid-area: nav; }*/
+        .main { grid-area: main; }
+        .footer { grid-area: footer; }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+        }
+
+        .item {
+            flex: 1 1 calc(100% - 3rem);
+            background: white;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (min-width: 600px) {
+            body {
+                grid-template-columns: 3fr 4fr 3fr;
+                grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+            }
+
+      /*      .nav {
+                grid-row: 1;
+            }*/
+
+            .content {
+                gap: 2rem;
+            }
+
+            .item {
+                flex: 1 1 calc(50% - 2rem);
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                grid-template-columns: 1fr 4fr 1fr;
+                grid-template-areas:
+            "header header header"
+            ". main ."
+            "footer footer footer";
+            }
+
+            .main {
+                grid-column: 2;
+            }
+
+            .content {
+                gap: 2rem;
+            }
+
+            .item {
+                flex: 1 1 calc(25% - 2rem);
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">Responsive</header>
+<!--<nav class="nav">Navigation</nav>-->
+<main class="main">
+    <section class="content">
+        <div class="item"><a href="Media.html">Media</a></div>
+        <div class="item"><a href="Bootstrap.html">Quiz</a></div>
+        <div class="item"><a href="Media.html">AGB</a></div>
+        <div class="item"><a href="Index.html">Homepage</a></div>
+    </section>
+</main>
+<footer class="footer">Füssler</footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="App">
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1>Bootstrap</h1>
+            <p class="lead">Easy basic ah looking Website</p>
+        </div>
+    </header>
+
+    <main class="container mt-2">
+        <section class="mb-3">
+            <h2>Does she Love me?</h2>
+        </section>
+        <section class="mb-3">
+            <form id="quizForm" action="https://gibm.becknet.ch/formular/formular.php" method="post">
+                <fieldset>
+                    <legend>Questions 1-5</legend>
+
+                    <div class="mb-3">
+                        <label for="q1a" class="form-label">Question 1: How does she look at you?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1a" value="1" required>
+                            <label class="form-check-label" for="q1a">With adoration</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1b" value="0">
+                            <label class="form-check-label" for="q1b">Like you owe her money, Geringverdiener</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q2" class="form-label">Question 2: How often does she text you first from 1 to 10?</label>
+                        <input type="number" class="form-control" id="q2" name="q2" placeholder="Enter number of times per week" min="1" max="10" required>
+                        <div class="invalid-feedback">
+                            Please enter a number between 1 and 10.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q3" class="form-label">Question 3: How does she behave around you in groups?</label>
+                        <select class="form-select" id="q3" name="q3" required>
+                            <option value="">Select one...</option>
+                            <option value="1">She's attentive and laughs at your jokes</option>
+                            <option value="0">She barely notices you're there</option>
+                            <option value="2">She squeezes out the balls of your eyes</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select an option.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Question 4: What's her favorite movie genre?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="q4a" name="q4a" value="1">
+                            <label class="form-check-label" for="q4a">Romantic Comedy</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="q4b" name="q4b" value="1">
+                            <label class="form-check-label" for="q4b">Action</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="q4c" name="q4c" value="1">
+                            <label class="form-check-label" for="q4c">Horror</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q5" class="form-label">Question 5: How does she respond when you compliment her?</label>
+                        <textarea class="form-control" id="q5" name="q5" rows="3" placeholder="Enter her usual response" minlength="10" maxlength="100" required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter a valid response (between 10 and 100 characters).
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="questions6To10" style="display: none;">
+                    <legend>Questions 6-10</legend>
+
+                    <div class="mb-3">
+                        <label for="q6" class="form-label">Question 6: When did you first meet?</label>
+                        <input type="date" class="form-control" id="q6" name="q6" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid date.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q7" class="form-label">Question 7: What is her email address?</label>
+                        <input type="email" class="form-control" id="q7" name="q7" placeholder="Enter her email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q8" class="form-label">Question 8: What is your favorite memory together?</label>
+                        <input type="text" class="form-control" id="q8" name="q8" required>
+                        <div class="invalid-feedback">
+                            This field is required.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q9" class="form-label">Question 9: What's her favorite dessert?</label>
+                        <input type="text" class="form-control" id="q9" name="q9" minlength="3" required>
+                        <div class="invalid-feedback">
+                            Please enter at least 3 characters.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q10" class="form-label">Question 10: What is her phone number?</label>
+                        <input type="tel" class="form-control" id="q10" name="q10" placeholder="Enter her phone number" pattern="[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid phone number (e.g., 123 456 78 90).
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="q12" class="form-label">Question 12: What is her favorite color?</label>
+                        <input type="color" class="form-control" id="q12" name="q12" required>
+                        <div class="invalid-feedback">
+                            Please select a color.
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="button" class="btn btn-secondary mb-3" onclick="handleButtonClick()">Show Questions 6-10</button>
+
+                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Feet</p>
+    </footer>
+</div>
+
+<script>
+
+    function handleButtonClick() {
+        var questions6To10 = document.getElementById('questions6To10');
+        if (questions6To10.style.display === 'none') {
+            questions6To10.style.display = 'block';
+        } else {
+            questions6To10.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
