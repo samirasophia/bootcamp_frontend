@@ -40,15 +40,16 @@
 
         }
         .body-big {
+            padding-left: 10px;
+            padding-right: 10px;
             border-color: #37424e;
             border-left-style: none;
             border-right-style: none;
             border-bottom-style: solid;
             border-top-style: none;
             border-width: 1px;
-
-            height:80vw;
-            min-width:400px;
+            height:45vw;
+            min-width:100vw;
             background-color: #1c2228;
         }
         .header {
@@ -94,7 +95,40 @@
         .navigation-right {
            display: flex;
            float: right;
-            align-content: ;
+        }
+        #flex-container-left {
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            height: 80vh;
+            width: 50%;
+            display: flex;
+            overflow: hidden;
+            background-color: #e880e8;
+        }
+        #flex-container-right {
+            justify-content: center;
+            align-items: center;
+            left: 50vw;
+            height: 80vh;
+            width: 50%;
+            display: flex;
+            overflow: hidden;
+            background-color: blue;
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #handle{
+            position: absolute;
+            left: -4px;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            cursor: w-resize;
         }
     </style>
 
@@ -125,7 +159,22 @@
 </div>
 <div class="header body-big">
 
+    <div id="container">
+<div id="flex-container-left">
+    <p>meow</p>
 </div>
+    <div id="flex-container-right">
+        <p>meow</p>
+    </div>
+        <div id="handle">
+        </div>
+        <div id="handleDiv" style="position: absolute; background-color: black; width: 50px; height: 100px; z-index: 100; top: 150px; right: 175px; cursor: w-resize;border-radius: 10px;">
+        </div>
+</div>
+</div>
+
+
+
 <script defer>
     const myButton = document.getElementById('Systeminformationen-schliessen');
 
@@ -142,8 +191,47 @@
             myButton.style.transform = ""
             }
     })
-    // document.querySelector("#Systeminformationen-schliessen")
 
+
+    var isResizing = false,
+        lastDownX = 0;
+
+    $(function () {
+        var container = $('.container'),
+            left = $('.flex-container-left'),
+            right = $('.flex-container-right'),
+            handle = $('.handle');
+
+        handle.on('mousedown', function (e) {
+            isResizing = true;
+            lastDownX = e.clientX;
+        });
+
+        $('#handleDiv').on('mousedown', function (e) {
+            //alert('asd');
+            console.log('mousedown')
+            isResizing = true;
+
+            $(document).on('mousemove.handle', function (e) {
+                var offsetRight = container.width() - (e.clientX - container.offset().left);
+                if (offsetRight > 50 - 10 && offsetRight < 600 + 10) {
+                    lastDownX = e.clientX;
+                    $('#handleDiv').css({left: lastDownX - 25, top: 150});
+                    if (offsetRight > 50 && offsetRight < 600) {
+                        left.css('right', offsetRight);
+                        right.css('width', offsetRight);
+                    }
+                }
+            });
+
+        });
+
+        $(document).on('mouseup', function (e) {
+            isResizing = false;
+            $(document).off('mousemove.handle');
+        });
+    });
+    // document.querySelector("#Systeminformationen-schliessen")
 </script>
 
 </body>
